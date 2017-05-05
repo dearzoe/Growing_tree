@@ -1,0 +1,80 @@
+  # 正则替换
+- @胡文哲 2017.5.4
+
+jQuery\(
+\$\(
+
+^document.getElementById(\(["'])(\w*.\w*["']\))?.value\s{0,1}=(["']\w*['"])
+\$$1#$2.val($3)
+
+=\s{0,1}document.getElementById(\(["'])(\w*.\w*["']\))?.value\;{0,1}$
+= \$$1#$2.val()
+
+document.getElementById(\(["'])(\w*["']\))?.value
+\$$1#$2.val()
+
+document.getElementById(\(["'])(\w*["']\))
+\$$1#$2
+
+document.getElementsByName\(['"](\w*)['"]\)\[0].innerText
+\$("[name=$1]").eq(0).text()
+
+document.getElementsByName\(['"](\w*)['"]\)\[i\].value
+\$\("[name=$1]").val()
+
+document.getElementsByName\(['"](\w*)['"]\)\[0\].value
+\$\("[name=$1]").eq(0).val()
+
+document.getElementsByName\(['"](\w*)['"]\)\[i\].checked = (\w*);
+\$\("[name=$1]").eq(i).prop("checked", $2)
+
+document.getElementsByName\(['"](\w*)['"]\)\[i]
+\$\("[name=$1]").eq(i)
+
+document.getElementsByName\(['"](\w*)['"]\)\[0]
+\$\("[name=$1]:first")
+
+document.getElementsByName\(['"](\w*)['"]\)
+\$\("[name=$1]")
+
+-非主要
+\.style.(\w*)[ ]=[ ]((['"]\s*\S*['"]))
+.css("$1",$2)
+
+document.forms\[0].action[ ]=[ ](["']\w*[ \.]\w*['"])
+\$("form:first").attr("action",$1)
+
+document.forms\[0].action[ ]=[ ]url
+\$("form:first").attr("action",url)
+
+document.forms\[0].action=(['"]<\w\W\w*\s\w*=['"]\w*["']></\w\W\w*>['"])
+\$("form:first").submit()
+
+document.forms\[0].action[ ]=[ ](contextPath\+['"](\/\w*)*.\w*['"])
+\$("form:first").attr("action",$1)
+
+document.forms\[0].action[ ]=[ ](\w*)
+\$("form:first").attr("action",$1)
+
+document.forms\[0].submit\()
+\$("form:first").submit()
+
+$(document.forms\[0])
+$("form:first")
+
+.addEventListener\(
+.on(
+
+document.body.clientHeight
+\$body.height()
+
+- @加容器
+(\$\(['"]\w*['"])\)
+$1,\$context)
+
+(_[A-Z]*\()(\);)
+$1\$context$2
+
+## 暂时未使用
+document.forms\[0].(\w*).value
+\$("form:first").attr("$1").value
