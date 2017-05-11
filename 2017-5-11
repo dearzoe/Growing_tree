@@ -1,1 +1,12 @@
-body
+'use strict'
+body \$\(["']
+
+
+
+.bind('mouseover'
+.bind("mousedown"
+.attr("checked"
+document.getElementsByName
+$("form:first",$context)[0].action = url;
+$("form:first",$context)[0].submit();
+$("[name='application']:first",$context)[0];//检查是否真是两层
